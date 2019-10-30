@@ -1,32 +1,189 @@
 html {
   font-family: "Fredoka One", cursive;
-  background: repeating-linear-gradient(140deg, #c9fcff, #d4fdff 20px, #c9fcff 25px);
+}
+
+.banner {
+  background: repeating-linear-gradient(-45deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  border-top: 8px solid #b3fbff;
+  border-bottom: 8px solid #b3fbff;
 }
 
 h1 {
   color: #990073;
-  transform: rotate(-9deg);
+  position: relative;
+  left: -.15em;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+  transform: rotate(-11deg);
+  transform-origin: left center;
+  filter: blur(12px);
+  opacity: 0;
+  animation: h1 .2s 1.2s ease-in forwards;
+}
+
+@keyframes h1 {
+
+  0% {
+    transform: rotate(-11deg);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-9deg);
+    filter: blur(0);
+    opacity: 100;
+  }
 }
 
 p {
   color: #c09;
-  transform: rotate(-8deg);
-  max-width: 19em;
-}
-
-a {
-  color: #c09;
-  text-decoration: none;
-}
-
-.btn {
-  background-color: none;
-  border-color: #990073;
-  padding: 10px;
-}
-
-.banner {
   position: relative;
-  top: 80px;
-  left: 20%;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+  transform: rotate(-7deg);
+  max-width: 19em;
+  transform-origin: left center;
+  filter: blur(12px);
+  opacity: 0;
+  animation: p .2s 1.2s ease-in forwards;
+}
+
+@keyframes p {
+
+  0% {
+    transform: rotate(-7deg);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-5deg);
+    filter: blur(0);
+    opacity: 100;
+  }
+
+}
+
+.btn-ghost {
+  color: #c09;
+  border: 3px solid #990073;
+  position: relative;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+  filter: blur(12px);
+  opacity: 0;
+  animation: btn .2s 1.2s ease-in forwards;
+}
+
+@keyframes btn {
+
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 100;
+  }
+
+}
+
+.btn-ghost:hover {
+  color: #c09;
+  background-color: rgba(153, 0, 115, .1);
+  border: 3px solid #990073;
+}
+
+.ice-cream {
+  min-height: 480px;
+}
+
+.flavours {
+  width: 180px;
+  height: 180px;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+}
+
+.cone {
+  animation: cone-drop .3s ease-in forwards;
+}
+
+.mint {
+  animation: mint-drop .3s .2s ease-in forwards;
+}
+
+.chocolate {
+  left: 55%;
+  animation: chocolate-drop .3s .4s ease-in forwards;
+}
+
+.vanilla {
+  left: 49%;
+  animation: vanilla-drop .3s .6s ease-in forwards;
+}
+
+.cherry {
+  left: 51%;
+  animation: cherry-drop .3s .8s ease-in forwards;
+}
+
+@keyframes cone-drop {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 0;
+  }
+
+}
+
+@keyframes mint-drop {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 106px;
+  }
+
+}
+
+@keyframes chocolate-drop {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 193px;
+  }
+
+}
+
+@keyframes vanilla-drop {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 266px;
+  }
+
+}
+
+@keyframes cherry-drop {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 350px;
+  }
+
 }
