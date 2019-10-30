@@ -1,5 +1,5 @@
 html {
-  font-family: "Fredoka One", cursive;
+  font-family: "Fredoka One", sans-serif;
 }
 
 .banner {
@@ -33,6 +33,7 @@ h1 {
     filter: blur(0);
     opacity: 100;
   }
+
 }
 
 p {
